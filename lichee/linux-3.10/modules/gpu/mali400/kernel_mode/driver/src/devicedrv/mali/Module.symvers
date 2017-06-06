@@ -1,0 +1,6 @@
+0x00000000	mali_set_user_setting	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x00000000	mali_perf_set_num_pp_cores	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x00000000	mali_dev_resume	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x00000000	mali_dev_pause	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x00000000	mali_get_user_setting	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL
+0x00000000	gpu_thermal_cool	/home/gufengyun/workspace/t3kk/lichee/linux-3.10/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali	EXPORT_SYMBOL

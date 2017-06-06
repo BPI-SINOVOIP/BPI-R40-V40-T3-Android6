@@ -1,0 +1,9 @@
+#
+# Platform drivers
+#	All drivers here are currently for webcam support
+
+config VIDEO_CAR_REVERSE
+	tristate "Support car reverse driver"
+	help
+	  Support for the car reverse.
+

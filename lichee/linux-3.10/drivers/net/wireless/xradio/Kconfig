@@ -1,0 +1,14 @@
+config XR_WLAN
+	tristate "XRADIO WLAN support"
+	default n
+	select CFG80211
+	select AVERAGE
+	---help---
+	  To compile this code as a module, choose M here.
+
+if XR_WLAN
+
+source "drivers/net/wireless/xradio/umac/Kconfig"
+source "drivers/net/wireless/xradio/wlan/Kconfig"
+
+endif # XR_WLAN

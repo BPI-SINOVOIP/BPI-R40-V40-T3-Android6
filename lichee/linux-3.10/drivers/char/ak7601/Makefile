@@ -1,0 +1,2 @@
+obj-$(CONFIG_AK7601_AUDIO_DSP)	+= ak7601.o
+

@@ -1,0 +1,5 @@
+config AK7601_AUDIO_DSP
+	tristate "external audio asp support  multiple input and output"
+	default M 
+	help
+	  This is SUN8I external asp  driver.
