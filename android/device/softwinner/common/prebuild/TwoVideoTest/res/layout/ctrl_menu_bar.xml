@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+ 	    android:layout_height="80dp"
+ 	    android:id="@+id/ctrl_menu_bar"
+ 	  	android:layout_alignParentBottom="true"
+ 	  	android:orientation="horizontal"
+ 	  	android:gravity="center_vertical|center_horizontal"
+ 	    android:background="#77333333" 
+ 	    android:visibility="visible" >
+    
+
+	<ImageButton
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="match_parent"
+ 	        android:layout_weight="1"
+ 	        android:id="@+id/recordbutton"
+ 	        android:src="@drawable/record_select"
+ 	        android:background="@drawable/background_selector"
+ 	        android:onClick="onCtrlMenuBarClick"
+ 	        />
+	<ImageButton 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/settingbutton"
+        android:onClick="onCtrlMenuBarClick"
+        android:src="@drawable/setting_icon"
+        android:background="@drawable/background_selector"
+ 	        />
+	
+</LinearLayout>

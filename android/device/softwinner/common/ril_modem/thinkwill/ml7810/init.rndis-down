@@ -1,0 +1,26 @@
+#!/system/bin/sh
+# An unforunate wrapper script 
+# so that the exit code of ecm-down may be retrieved
+
+
+DHCPCD_PID=
+
+/system/bin/log -t dhcpcd "Starting rndis-down script"
+/system/bin/log -t dhcpcd "Starting rndis-down script in init.rndis-down"
+
+dev_path=`/system/bin/getprop ril.device.rndis.path`
+
+/system/bin/netcfg $dev_path down
+
+/system/bin/setprop  "dhcp.${dev_path}.ipaddress" "0.0.0.0"
+/system/bin/setprop  "dhcp.${dev_path}.gateway"   "0.0.0.0"
+/system/bin/setprop  "dhcp.${dev_path}.mask"      "0.0.0.0"
+/system/bin/setprop  "dhcp.${dev_path}.leasetime" ""
+/system/bin/setprop  "dhcp.${dev_path}.server"    "0.0.0.0"
+/system/bin/setprop  "dhcp.${dev_path}.result"    ""
+
+
+DHCPCD_EXIT=$?
+DHCPCD_PID=$!
+
+/system/bin/log -t dhcpcd "rndis-down exited with $DHCPCD_EXIT"

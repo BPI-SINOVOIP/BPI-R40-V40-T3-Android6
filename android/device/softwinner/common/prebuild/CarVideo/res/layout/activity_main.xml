@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+ 	<!-- <FrameLayout 
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent">
+ 	    <TextureView
+ 	        android:id="@+id/preview_content"
+ 	        android:layout_width="match_parent"
+ 	        android:layout_height="match_parent"
+ 	        />
+ 	</FrameLayout>  -->
+ 	<TextureView
+ 	        android:id="@+id/preview_content"
+ 	        android:layout_width="match_parent"
+ 	        android:layout_height="match_parent"
+ 	        />
+ 	
+ 	<LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+    <TextView android:id="@+id/recording_time"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:background="@drawable/bg_text_on_preview"
+        	android:singleLine="true"
+        	android:textColor="@android:color/white"
+        	android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="3dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="3dp"      
+            android:drawableLeft="@drawable/ic_recording_indicator"
+            android:drawablePadding="5dp"
+            android:text="@string/time"
+            android:visibility="gone"
+             />
+	</LinearLayout>
+ 	        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/ctrl_menu_bar" />
+
+</RelativeLayout>

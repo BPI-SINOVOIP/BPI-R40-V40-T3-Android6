@@ -1,0 +1,19 @@
+#!/system/bin/sh
+# An unforunate wrapper script 
+# so that the exit code of dhcpcd may be retrieved
+
+DHCPCD_PID=
+
+/system/bin/log -t dhcpcd  "Starting dhcpcd"
+/system/bin/log -t dhcpcd  "Starting dhcpcd-rndis script in dhcpcd-rndis"
+
+dev_path=`/system/bin/getprop ril.device.rndis.path`
+
+/system/bin/log -t dhcpcd  "Starting dhcpcd-rndis script dev_path : $dev_path"
+
+/system/bin/dhcpcd $dev_path
+
+DHCPCD_EXIT=$?
+DHCPCD_PID=$!
+
+/system/bin/log -t dhcpcd-rndis "dhcpcd-rndis exited with $DHCPCD_EXIT"

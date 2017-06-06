@@ -1,0 +1,14 @@
+on init
+    insmod /nand.ko
+
+    insmod /sunxi-keyboard.ko
+    exec /sbin/busybox sh /sbin/init_parttion.sh
+
+
+service console /system/bin/sh
+    class core
+    console
+    disabled
+    user shell
+    group shell log
+    seclabel u:r:shell:s0

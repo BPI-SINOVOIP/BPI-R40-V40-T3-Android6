@@ -1,0 +1,25 @@
+	
+# for Think-Will 4G support
+service ril-daemon /system/bin/rild -l /system/lib/libreference-ril-ml7810.so
+    class main
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    user root
+
+on property:ril.reset.rild=1
+    stop ril-daemon
+    start ril-daemon
+    setprop ril.reset.rild 0
+
+service dhcpcd-rndis /system/etc/init.dhcpcd-rndis
+    user root
+    group radio cache inet misc
+    disabled
+    oneshot
+	
+service rndis-down /system/etc/init.rndis-down
+    user root
+    group radio cache inet misc
+    disabled
+    oneshot
+	
